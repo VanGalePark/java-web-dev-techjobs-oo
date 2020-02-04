@@ -72,7 +72,7 @@ public class Job {
         if(this.coreCompetency.getValue() == "") {
             jobCoreCompetency = "\nCore Competency: Data not available!";
         } else {
-            jobCoreCompetency = "\nCore Competency: " + this.coreCompetency;
+            jobCoreCompetency = "\nCore Competency: " + this.coreCompetency + "\n";
         }
 
         String toStringResult = jobId + jobName + jobEmployer + jobLocation + jobPositionType + jobCoreCompetency;
