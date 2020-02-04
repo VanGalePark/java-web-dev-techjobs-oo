@@ -36,6 +36,52 @@ public class Job {
     //  match.
 
     @Override
+    public String toString() {
+        String jobId = "ID: " + this.id;
+
+        String jobName;
+        String jobEmployer;
+        String jobLocation;
+        String jobPositionType;
+        String jobCoreCompetency;
+
+        if(this.name == "") {
+            jobName = "\nName: Data not available!";
+        } else {
+            jobName = "\nName: " + this.name;
+        }
+
+        if(this.employer.getValue() == "") {
+            jobEmployer = "\nEmployer: Data not available!";
+        } else {
+            jobEmployer = "\nEmployer: " + this.employer;
+        }
+
+        if(this.location.getValue() == "") {
+            jobLocation = "\nLocation: Data not available!";
+        } else {
+            jobLocation = "\nLocation: " + this.location;
+        }
+
+        if(this.positionType.getValue() == "") {
+            jobPositionType = "\nPosition Type: Data not available!";
+        } else {
+            jobPositionType = "\nPosition Type: " + this.positionType;
+        }
+
+        if(this.coreCompetency.getValue() == "") {
+            jobCoreCompetency = "\nCore Competency: Data not available!";
+        } else {
+            jobCoreCompetency = "\nCore Competency: " + this.coreCompetency;
+        }
+
+        String toStringResult = jobId + jobName + jobEmployer + jobLocation + jobPositionType + jobCoreCompetency;
+
+        return toStringResult;
+    }
+
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
